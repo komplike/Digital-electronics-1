@@ -1,4 +1,4 @@
-##Gates
+## Gates
 | **A** | **NOT** |
 | :-: | :-: |
 | 0 | 1 |
@@ -25,11 +25,11 @@
 | 1 | 1 | 0 | 1 |
 | 1 | 0 | 1 | 0 |
 
-![](and_or_xor_not.png)
+![image](and_or_xor_not.png)
 
-##De Morgan's law
+## De Morgan's law
 
-| **A** | **B** | **C** | f | f_AND | f_OR |
+| **A** | **B** | **C** | ![](https://latex.codecogs.com/gif.latex?f) | ![](https://latex.codecogs.com/gif.latex?f_A_N_D) | ![](https://latex.codecogs.com/gif.latex?f_O_R) |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | 0 | 0 | 0 | 1 | 1 | 1 |
 | 0 | 0 | 1 | 0 | 0 | 0 |
@@ -40,6 +40,5 @@
 | 1 | 1 | 0 | 0 | 0 | 0 |
 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-![](de_morgan_f.png)
-![](de_morgan_f_and.png)
-![](de_morgan_f_or.png)
+| ![](de_morgan_f.png) | ![](de_morgan_f_and.png) | ![](de_morgan_f_or.png) |
+| :-: | :-: | :-: |
