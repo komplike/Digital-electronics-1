@@ -1,1 +1,2 @@
-# Digital-electronics-1
+# Brno University of Technology
+## Digital-electronics-1
