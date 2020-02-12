@@ -17,9 +17,9 @@ https://codecogs.com/latex/eqneditor.php
 ![](https://latex.codecogs.com/gif.latex?y_%7BA%3CB%7D%5E%7BSoP%7D%3DB.%5Cbar%7BA%7D)
 
 ## K-maps
-|     |  A  |
+|  |  |  A  |
 | :-: | :-: | :-: |
-    | 0 | 1 |
+|   | 0 | 1 |
 | B | 0 | 0 |
 
 ![](y_{A<B}^{SoP,min}=)
