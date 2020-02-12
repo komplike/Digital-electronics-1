@@ -10,12 +10,16 @@
 ## SoP and PoS forms
 https://codecogs.com/latex/eqneditor.php
 
-![](y_{A>B}^{SoP}=)
+![](https://latex.codecogs.com/gif.latex?y_%7BA%3EB%7D%5E%7BSoP%7D%3DA.%5Cbar%7BB%7D)
 
-![](y_{A=B}^{SoP}=)
+![](https://latex.codecogs.com/gif.latex?y_%7BA%3DB%7D%5E%7BSoP%7D%3D%5Cbar%7BA%7D.%5Cbar%7BB%7D&plus;A.B)
 
-![](y_{A<B}^{SoP}=)
+![](https://latex.codecogs.com/gif.latex?y_%7BA%3CB%7D%5E%7BSoP%7D%3DB.%5Cbar%7BA%7D)
 
 ## K-maps
+|     |  A  |
+| :-: | :-: | :-: |
+    | 0 | 1 |
+| B | 0 | 0 |
 
 ![](y_{A<B}^{SoP,min}=)
