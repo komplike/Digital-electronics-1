@@ -21,5 +21,6 @@
 | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-![datasheet](disp1_sheet.png)
-![IO](I_O.png)
+![datasheet](disp1_sheet.png) | ![IO](I_O.png)
+
+
