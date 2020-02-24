@@ -1,4 +1,4 @@
-#Lab 04 - Adder
+# Lab 04 - Adder
 
 ## Half adder
 
