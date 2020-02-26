@@ -26,4 +26,6 @@
 
 ![full_adder](full_adder.png)
 
+## Simulation results
 
+![full_adder_sim](full_adder_sim.png)
