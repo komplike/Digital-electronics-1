@@ -2,20 +2,20 @@
 <!--This is an ISE project configuration file.-->
 <!--It holds project specific layout data for the projectmgr plugin.-->
 <!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
-<Project version="2" owner="projectmgr" name="comparator" >
+<Project version="2" owner="projectmgr" name="ise" >
    <!--This is an ISE project configuration file.-->
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/comparator/coolrunner.ucf (/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/comparator/coolrunner.ucf)</SelectedItem>
+         <SelectedItem>ise</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002f2000000020000000000000000000000000200000064ffffffff000000810000000300000002000002f20000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000ef000000020000000000000000000000000200000064ffffffff000000810000000300000002000000ef0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/comparator/coolrunner.ucf (/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/comparator/coolrunner.ucf)</CurrentItem>
+      <CurrentItem>ise</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -23,13 +23,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -40,7 +40,7 @@
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003a1000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004a0000000100000000000000280000000100000000000000790000000100000000000002b60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>coolrunner.ucf</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -58,32 +58,31 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities</ClosedNode>
-         <ClosedNode>Implement Design/Configure Target Device</ClosedNode>
          <ClosedNode>Implement Design/Optional Implementation Tools</ClosedNode>
+         <ClosedNode>Implement Design/Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Configure Target Device</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Configure Target Device</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/top_tb00 - behavior |home|lab661|Documents|santakremiec|Digital-electronics-1|Labs|02-ise|comparator|top_tb00.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>top_tb00 - behavior (/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/comparator/top_tb00.vhd)</SelectedItem>
+         <SelectedItem>top_tb00 - behavior (/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/ise/top_tb00.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000031e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000031e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002e8000000020000000000000000000000000200000064ffffffff000000810000000300000002000002e80000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>top_tb00 - behavior (/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/comparator/top_tb00.vhd)</CurrentItem>
+      <CurrentItem>top_tb00 - behavior (/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/02-ise/ise/top_tb00.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -112,6 +111,8 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001380000011b01000000040100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
@@ -126,6 +127,5 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000001380000011b01000000040100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CopyAdditionalFiles/>
 </Project>

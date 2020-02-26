@@ -1,0 +1,200 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C256144 | XC2C256-6-TQ144
+
+DEVICE | 2C256 | 2C256144 | 
+
+NETWORK | full_adder | 0 | 0 | 1073758214 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_i_II | full_adder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a_i | 147 | PI | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_i_II/UIM | 153 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | a_i_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_i_II | full_adder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b_i | 148 | PI | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_i_II/UIM | 154 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | b_i_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | carry_i_II | full_adder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | carry_i | 149 | PI | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | carry_i_II/UIM | 155 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | carry_i_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | Inv | carry_o_MC | full_adder_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_i_II/UIM | 153 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | a_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_i_II/UIM | 154 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | b_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | carry_i_II/UIM | 155 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | carry_i_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | carry_o_MC.Q | 157 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | carry_o_MC.Q | carry_o_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | carry_o_MC.SI | carry_o_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_i_II/UIM | 153 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | a_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_i_II/UIM | 154 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | b_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | carry_i_II/UIM | 155 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | carry_i_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | carry_o_MC.D1 | 152 | ? | 0 | 0 | carry_o_MC | NULL | NULL | carry_o_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | carry_o_MC.D2 | 151 | ? | 0 | 0 | carry_o_MC | NULL | NULL | carry_o_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | a_i_II/UIM | IV_FALSE | b_i_II/UIM
+SPPTERM | 3 | IV_TRUE | a_i_II/UIM | IV_FALSE | b_i_II/UIM | IV_FALSE | carry_i_II/UIM
+SPPTERM | 3 | IV_FALSE | a_i_II/UIM | IV_TRUE | b_i_II/UIM | IV_FALSE | carry_i_II/UIM
+
+SRFF_INSTANCE | carry_o_MC.REG | carry_o_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | carry_o_MC.D | 150 | ? | 0 | 0 | carry_o_MC | NULL | NULL | carry_o_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | carry_o_MC.Q | 156 | ? | 0 | 0 | carry_o_MC | NULL | NULL | carry_o_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | carry_o | full_adder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | carry_o_MC.Q | 157 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | carry_o_MC.Q | carry_o_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | carry_o | 158 | PO | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | carry_o | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | sum_o_MC | full_adder_COPY_0_COPY_0 | 0 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_i_II/UIM | 153 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | a_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_i_II/UIM | 154 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | b_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | carry_i_II/UIM | 155 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | carry_i_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | sum_o_MC.Q | 163 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | sum_o_MC.Q | sum_o_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | sum_o_MC.SI | sum_o_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_i_II/UIM | 153 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | a_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_i_II/UIM | 154 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | b_i_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | carry_i_II/UIM | 155 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | carry_i_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | sum_o_MC.D1 | 160 | ? | 0 | 0 | sum_o_MC | NULL | NULL | sum_o_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | a_i_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | sum_o_MC.D2 | 161 | ? | 0 | 0 | sum_o_MC | NULL | NULL | sum_o_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | b_i_II/UIM | IV_FALSE | carry_i_II/UIM
+SPPTERM | 2 | IV_FALSE | b_i_II/UIM | IV_TRUE | carry_i_II/UIM
+
+SRFF_INSTANCE | sum_o_MC.REG | sum_o_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | sum_o_MC.D | 159 | ? | 0 | 0 | sum_o_MC | NULL | NULL | sum_o_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | sum_o_MC.Q | 162 | ? | 0 | 0 | sum_o_MC | NULL | NULL | sum_o_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | sum_o | full_adder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | sum_o_MC.Q | 163 | ? | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | sum_o_MC.Q | sum_o_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | sum_o | 164 | PO | 0 | 0 | full_adder_COPY_0_COPY_0 | NULL | NULL | sum_o | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 3 | sum_o_MC | 1 | NULL | 0 | sum_o | 1 | 143 | 51200
+FBPIN | 4 | carry_o_MC | 1 | NULL | 0 | carry_o | 1 | 142 | 49152
+FBPIN | 6 | NULL | 0 | a_i_II | 1 | NULL | 0 | 140 | 49152
+FBPIN | 12 | NULL | 0 | b_i_II | 1 | NULL | 0 | 139 | 49152
+FBPIN | 13 | NULL | 0 | carry_i_II | 1 | NULL | 0 | 138 | 49152
+
+FB_INSTANCE | FOOBAR2_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR3_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR5_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR6_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR7_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR8_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR9_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR10_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR11_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR12_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR13_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR14_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR15_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR16_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR17_ | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR5_ | FOOBAR5__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR6_ | FOOBAR6__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR7_ | FOOBAR7__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR8_ | FOOBAR8__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR9_ | FOOBAR9__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR10_ | FOOBAR10__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR11_ | FOOBAR11__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR12_ | FOOBAR12__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR13_ | FOOBAR13__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR14_ | FOOBAR14__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR15_ | FOOBAR15__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR16_ | FOOBAR16__ctinst | full_adder_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 6
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_FALSE | a_i_II/UIM | IV_FALSE | b_i_II/UIM
+PLA_TERM | 1 | 
+SPPTERM | 3 | IV_FALSE | a_i_II/UIM | IV_TRUE | b_i_II/UIM | IV_FALSE | carry_i_II/UIM
+PLA_TERM | 2 | 
+SPPTERM | 3 | IV_TRUE | a_i_II/UIM | IV_FALSE | b_i_II/UIM | IV_FALSE | carry_i_II/UIM
+PLA_TERM | 3 | 
+SPPTERM | 2 | IV_FALSE | b_i_II/UIM | IV_TRUE | carry_i_II/UIM
+PLA_TERM | 4 | 
+SPPTERM | 2 | IV_TRUE | b_i_II/UIM | IV_FALSE | carry_i_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_TRUE | a_i_II/UIM
+
+
+IOSTD | LVCMOS18
+a_i | LVCMOS18
+b_i | LVCMOS18
+carry_i | LVCMOS18
+carry_o | LVCMOS18
+sum_o | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 5 | a_i | 140 | 6 | b_i | 139 | 7 | carry_i | 138
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | -1 | -1 | -1 | 5 | 6 | 7 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
