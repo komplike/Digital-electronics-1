@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=/home/komplike/Digital-electronics-1/Labs/04-adder/adder/impact.xsl
-OUTFILE=/home/komplike/Digital-electronics-1/Labs/04-adder/adder/impact.xsl
-FAMILY=Single
-PART=Single
-WORKINGDIR=/home/komplike/Digital-electronics-1/Labs/04-adder/adder
-LICENSE=iMPACT
-USER_INFO=iMPACT
