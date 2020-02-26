@@ -28,4 +28,4 @@
 
 ## Simulation result
 
-![sim](full_adder_sim.png)
+![sim](simulation.png)
