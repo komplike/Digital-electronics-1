@@ -26,7 +26,7 @@
 #NET LD3         LOC = P64;
 #NET LD2         LOC = P66;
 #NET LD1         LOC = P68;
-#NET LD0         LOC = P69;
+NET LD0         LOC = P69;
 
 #-----------------------------------------------------------------------
 # Four-digit time-multiplexed seven-segment LED display
