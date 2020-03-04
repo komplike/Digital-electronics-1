@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-02-19T10:46:55</DateModified>
+  <DateModified>2020-02-26T09:11:06</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2020-02-19T10:44:59</SummaryTimeStamp>
   <SavedFilePath>/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/03-segment/hex_to_segment/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/03-segment</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/lab661/Documents/santakremiec/Digital-electronics-1/Labs/03-segment/</ImplementationReportsDirectory>
   <DateInitialized>2020-02-19T09:20:12</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
