@@ -24,6 +24,11 @@ entity top is
           SW9_CPLD:   in  std_logic;
           SW10_CPLD:  in  std_logic;
           SW11_CPLD:  in  std_logic;
+			 LD0:			 out std_logic;
+			 LD0_CPLD:	 out std_logic;
+			 LD1_CPLD:	 out std_logic;
+			 LD2_CPLD:	 out std_logic;			 
+			 LD3_CPLD:	 out std_logic;
           disp_seg_o: out std_logic_vector(7-1 downto 0);
           disp_dig_o: out std_logic_vector(4-1 downto 0));
 end entity top;
@@ -36,6 +41,7 @@ architecture Behavioral of top is
     signal s_carry0, s_carry1, s_carry2: std_logic;
     signal s_result: std_logic_vector(4-1 downto 0);
     signal s_carryOut: std_logic;
+
 begin
 
     -- Combine two 4-bit inputs to internal signals s_dataA and s_dataB
@@ -111,10 +117,13 @@ begin
 
     -- Show carry output bit on Coolrunner-II LED
     -- WRITE YOUR CODE HERE
-	 
+	 LD0 <= s_carryOut;
 
     -- Show two 4-bit inputs on CPLD expansion LEDs
     -- WRITE YOUR CODE HERE
-    -- LD0_CPLD => SW0_CPLD;
-
+    LD0_CPLD <= s_result(0);
+	 LD1_CPLD <= s_result(1);
+	 LD2_CPLD <= s_result(2);
+	 LD3_CPLD <= s_result(3);
+	
 end architecture Behavioral;

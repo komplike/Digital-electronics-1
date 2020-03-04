@@ -26,4 +26,6 @@
 
 ![full_adder](full_adder.png)
 
+## Simulation result
 
+![sim](simulation.png)
