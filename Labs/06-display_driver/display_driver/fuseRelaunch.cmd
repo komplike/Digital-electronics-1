@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_tb00_isim_beh.exe" -prj "/home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_tb00_beh.prj" "work.driver_tb00" 

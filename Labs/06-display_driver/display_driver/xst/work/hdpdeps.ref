@@ -1,0 +1,29 @@
+V3 15
+FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd 2020/03/12.11:18:45 P.20131013
+EN work/clock_enable 1584185762 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/clock_enable/Behavioral 1584185763 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd \
+      EN work/clock_enable 1584185762
+FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd 2020/03/12.11:53:58 P.20131013
+EN work/driver_7seg 1584185766 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/driver_7seg/Behavioral 1584185767 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd \
+      EN work/driver_7seg 1584185766 CP work/clock_enable CP work/hex_to_7seg
+FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd 2020/03/12.11:18:45 P.20131013
+EN work/hex_to_7seg 1584185764 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/hex_to_7seg/Behavioral 1584185765 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd \
+      EN work/hex_to_7seg 1584185764
+FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.vhd 2020/03/12.12:17:43 P.20131013
+EN work/top 1584185768 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1584185769 \
+      FL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.vhd \
+      EN work/top 1584185768 CP work/driver_7seg
