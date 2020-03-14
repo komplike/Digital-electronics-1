@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.xst" -ofn "/home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.syr" 

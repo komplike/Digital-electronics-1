@@ -1,8 +1,0 @@
-EN hex_to_7seg NULL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd sub00/vhpl02 1584185764
-EN driver_7seg NULL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd sub00/vhpl04 1584185766
-EN top NULL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.vhd sub00/vhpl06 1584185768
-AR driver_7seg behavioral /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd sub00/vhpl05 1584185767
-AR clock_enable behavioral /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd sub00/vhpl01 1584185763
-AR hex_to_7seg behavioral /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd sub00/vhpl03 1584185765
-EN clock_enable NULL /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd sub00/vhpl00 1584185762
-AR top behavioral /home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/top.vhd sub00/vhpl07 1584185769
