@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/komplike/Digital-electronics-1/Labs/07-stopwatch/stopwatch/stopwatch_tb00_isim_beh.exe" -prj "/home/komplike/Digital-electronics-1/Labs/07-stopwatch/stopwatch/stopwatch_tb00_beh.prj" "work.stopwatch_tb00" 

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-20T16:48:02</DateModified>
+  <DateModified>2020-03-20T18:34:27</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/komplike/Digital-electronics-1/Labs/06-display_driver/display_driver/</ImplementationReportsDirectory>
-  <DateInitialized>2020-03-13T00:16:18</DateInitialized>
+  <SavedFilePath>/home/komplike/Digital-electronics-1/Labs/07-stopwatch/stopwatch/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/komplike/Digital-electronics-1/Labs/07-stopwatch/stopwatch/</ImplementationReportsDirectory>
+  <DateInitialized>2020-03-20T17:40:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
