@@ -4,7 +4,8 @@ Updating reference VHDL files, to run the simulations of functional display driv
 ### Preparation
 Adding signal forms
 
-```{signal: [
+```
+{signal: [
   ['Digit position',
     {name: 'disp_dig_o(3)', wave: 'xx01..01..xx', },
     {name: 'disp_dig_o(2)', wave: 'xx101..01.xx', },
@@ -26,7 +27,8 @@ Adding signal forms
   head: {
     text: '4ms   4ms   4ms   4ms   4ms   4ms   4ms   4ms',
   },
-}```
+}
+```
 
 ![wavedrom](wavedrom.png)
 
