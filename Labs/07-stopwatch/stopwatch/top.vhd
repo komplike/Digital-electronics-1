@@ -35,7 +35,8 @@ entity top is
 		BTN0_i		: in	 std_logic := '0';
 		disp_seg_o	: out	 std_logic_vector(7-1 downto 0);
 		disp_dig_o 	: out	 std_logic_vector(4-1 downto 0);
-		disp_dp_o  	: out	 std_logic 
+		disp_dp_o  	: out	 std_logic
+		SW0_i			: in	 std_logic := '0';
 	);
 end top;
 
@@ -48,6 +49,7 @@ begin
 disp_seg_o <= seg_s;
 disp_dig_o <= dig_s;
 disp_dp_o  <= dp_s;
+
 
 	CLK_EN_0 : entity work.clock_enable
 		 generic map (
@@ -77,7 +79,7 @@ disp_dp_o  <= dp_s;
 			clk_i			=> clk_i,
 			srst_n_i		=> BTN0_i,
 			ce_100Hz_i	=> s_en,
-			cnt_en_i		=> '0',
+			cnt_en_i		=> SW0_i,
 			sec_h_o		=> sec_h_s,
 			sec_l_o		=> sec_l_s,
 			hth_h_o		=> hth_h_s,

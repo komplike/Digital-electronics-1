@@ -18,7 +18,7 @@ NET BTN0        LOC = P143;
 
 # Two slide switches
 #NET SW1         LOC = P124;
-#NET SW0         LOC = P39;
+NET SW0         LOC = P39;
 
 #-----------------------------------------------------------------------
 # Four discrete LEDs
