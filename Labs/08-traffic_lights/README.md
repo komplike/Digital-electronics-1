@@ -8,6 +8,7 @@
 ### State diagram
 ![SD](.png) TODO
 
-### Simulation of traffic lights controller(40ns=1s)
+### Simulation of traffic lights controller(20ns=1s)
 ![isim](isim.png)
+
 
