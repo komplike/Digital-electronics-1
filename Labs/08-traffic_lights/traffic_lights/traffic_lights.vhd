@@ -26,6 +26,7 @@ use ieee.std_logic_unsigned.all;
 entity traffic_lights is
 	port (
 		clk_i 	: in std_logic;
+		clk_1s	: in std_logic;
 		srst_n_i : in std_logic;
 		lights_o : out std_logic_vector(5 downto 0)
 		);
@@ -34,16 +35,34 @@ end entity traffic_lights;
 architecture Behavioral of traffic_lights is
 	type state_type is (g_r, y_r, r_r, r_g, r_y, r_r2);
 	signal state:	state_type;
-	signal cnt	:	unsigned(3 downto 0);
+	signal cnt	 :	unsigned(3 downto 0);
+	signal s_cnt :	unsigned(15 downto 0);
 	constant SEC5: unsigned(3 downto 0) := "1001";
 	constant SEC1: unsigned(3 downto 0) := "0001";
 begin
-	FSM: process (clk_i,srst_n_i)
+	p_clk_1s: process (clk_i,srst_n_i)
+   begin
+        if rising_edge(clk_i) then 
+            if srst_n_i = '0' then 
+                s_cnt <= (others => '0');
+            else
+                if s_cnt >= X"" then
+                    s_cnt <= (others => '0');
+                    clk_1s <= '1';
+                else
+                    s_cnt <= s_cnt + x"0001";
+                    clk_1s <= '0';
+					 end if;
+				end if;
+        end if;
+    end process p_clk_1s;
+
+	FSM: process (clk_1s,srst_n_i)
 	begin
 		if srst_n_i = '0' then
 			state <= g_r;
 			cnt <= X"0";
-		elsif rising_edge(clk_i) then
+		elsif rising_edge(clk_1s) then
 			case state is
 				when g_r =>
 					if cnt < SEC5 then
