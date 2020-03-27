@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/komplike/Digital-electronics-1/Labs/08-traffic_lights/traffic_lights/traffic_lights_tb0_isim_beh.exe" -prj "/home/komplike/Digital-electronics-1/Labs/08-traffic_lights/traffic_lights/traffic_lights_tb0_beh.prj" "work.traffic_lights_tb0" 
