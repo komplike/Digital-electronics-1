@@ -21,8 +21,58 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="traffic_lights.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="traffic_lights_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="traffic_lights_tb0_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="traffic_lights_tb0_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="traffic_lights_tb0_isim_beh.wdb"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1585337485" xil_pn:in_ck="6364029995870028860" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1585337485">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="clock_enable.vhd"/>
+      <outfile xil_pn:name="top.vhd"/>
+      <outfile xil_pn:name="traffic_lights.vhd"/>
+      <outfile xil_pn:name="traffic_lights_tb0.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1585337511" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5008314103905472116" xil_pn:start_ts="1585337511">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1585337485" xil_pn:in_ck="6364029995870028860" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1585337485">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="clock_enable.vhd"/>
+      <outfile xil_pn:name="top.vhd"/>
+      <outfile xil_pn:name="traffic_lights.vhd"/>
+      <outfile xil_pn:name="traffic_lights_tb0.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1585337516" xil_pn:in_ck="6364029995870028860" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6334487492439572082" xil_pn:start_ts="1585337511">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="traffic_lights_tb0_beh.prj"/>
+      <outfile xil_pn:name="traffic_lights_tb0_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1585337516" xil_pn:in_ck="-970362060614926571" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4549643529096868287" xil_pn:start_ts="1585337516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="traffic_lights_tb0_isim_beh.wdb"/>
+    </transform>
+  </transforms>
 
 </generated_project>

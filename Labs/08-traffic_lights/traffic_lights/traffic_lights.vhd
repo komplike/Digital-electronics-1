@@ -35,7 +35,7 @@ architecture Behavioral of traffic_lights is
 	type state_type is (g_r, y_r, r_r, r_g, r_y, r_r2);
 	signal state:	state_type;
 	signal cnt	:	unsigned(3 downto 0);
-	constant SEC5: unsigned(3 downto 0) := "1010";
+	constant SEC5: unsigned(3 downto 0) := "1001";
 	constant SEC1: unsigned(3 downto 0) := "0001";
 begin
 	FSM: process (clk_i,srst_n_i)

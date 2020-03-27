@@ -1,0 +1,29 @@
+Command line:
+   traffic_lights_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  51705
+
+Fri Mar 27 20:31:35 2020
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 196.829 Meg
+
+ Total Signals          : 5
+ Total Nets             : 13
+ Total Signal Drivers   : 3
+ Total Blocks           : 5
+ Total Primitive Blocks : 5
+ Total Processes        : 2
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 522
+Total Line Count : 43
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 272.331 Meg
+
+Fri Mar 27 20:31:48 2020
+
