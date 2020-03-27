@@ -1,3 +1,0 @@
-vhdl work "traffic_lights.vhd"
-vhdl work "clock_enable.vhd"
-vhdl work "top.vhd"
