@@ -6,7 +6,7 @@
 	signal state:	state_type;
 ```
 ### State diagram
-![SD](.png) TODO
+![SD](state_diagram.png)
 
 ### Simulation of traffic lights controller(20ns=1s)
 ![isim](isim.png)
