@@ -19,7 +19,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.all;
 use ieee.std_logic_unsigned.all;
 
 
@@ -43,62 +42,64 @@ begin
 
 	FSM: process (clk_i,srst_n_i)
 	begin
-		if srst_n_i = '0' then
-			state <= g_r;
-			cnt <= X"0";
-		elsif rising_edge(clk_i) then
-			case state is
-				when g_r =>
-					if cnt < SEC5 then
-						state <= g_r;
-						cnt <= cnt + 1;
-					else
-						state <= y_r;
-						cnt <= X"0";
-					end if;
-				when y_r =>
-					if cnt < SEC1 then
-						state <= y_r;
-						cnt <= cnt + 1;
-					else
-						state <= r_r;
-						cnt <= X"0";
-					end if;
-				when r_r =>
-					if cnt < SEC1 then
-						state <= r_r;
-						cnt <= cnt + 1;
-					else
-						state <= r_g;
-						cnt <= X"0";
-					end if;
-				when r_g =>
-					if cnt < SEC5 then
-						state <= r_g;
-						cnt <= cnt + 1;
-					else
-						state <= r_y;
-						cnt <= X"0";
-					end if;
-				when r_y =>
-					if cnt < SEC1 then
-						state <= r_y;
-						cnt <= cnt + 1;
-					else
-						state <= r_r2;
-						cnt <= X"0";
-					end if;
-				when r_r2 =>
-					if cnt < SEC1 then
-						state <= r_r2;
-						cnt <= cnt + 1;
-					else
-						state <= g_r;
-						cnt <= X"0";
-					end if;
-				when others =>
-						state <= g_r;
-			end case;
+		if rising_edge(clk_i) then
+			if srst_n_i = '0' then
+				state <= g_r;
+				cnt <= X"0";
+			else
+				case state is
+					when g_r =>
+						if cnt < SEC5 then
+							state <= g_r;
+							cnt <= cnt + 1;
+						else
+							state <= y_r;
+							cnt <= X"0";
+						end if;
+					when y_r =>
+						if cnt < SEC1 then
+							state <= y_r;
+							cnt <= cnt + 1;
+						else
+							state <= r_r;
+							cnt <= X"0";
+						end if;
+					when r_r =>
+						if cnt < SEC1 then
+							state <= r_r;
+							cnt <= cnt + 1;
+						else
+							state <= r_g;
+							cnt <= X"0";
+						end if;
+					when r_g =>
+						if cnt < SEC5 then
+							state <= r_g;
+							cnt <= cnt + 1;
+						else
+							state <= r_y;
+							cnt <= X"0";
+						end if;
+					when r_y =>
+						if cnt < SEC1 then
+							state <= r_y;
+							cnt <= cnt + 1;
+						else
+							state <= r_r2;
+							cnt <= X"0";
+						end if;
+					when r_r2 =>
+						if cnt < SEC1 then
+							state <= r_r2;
+							cnt <= cnt + 1;
+						else
+							state <= g_r;
+							cnt <= X"0";
+						end if;
+					when others =>
+							state <= g_r;
+				end case;
+			end if;
 		end if;
 	end process;
 	
