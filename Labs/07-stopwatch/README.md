@@ -1,6 +1,6 @@
 ## Lab 07 - Stopwatch
 Stopwatch based on BCD counters.
-So far the hardest task(approx. 12hrs of work, for comparission lab06 - 2hrs).
+So far the hardest task(approx. 12hrs of work, for comparison lab06 - 2hrs).
 
 ### RTL top schematic
 ![RTL](RTL_top.png)
