@@ -10,10 +10,6 @@ ARCHITECTURE behavior OF code_lock_tb_00 IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT top
-	 GENERIC (
-			 g_MAX    : unsigned(16-1 downto 0);
-			 g_MAX2   : unsigned(16-1 downto 0)
-	 );
     PORT(
          clk_i : IN  std_logic;
          btn0_i : IN  std_logic;
@@ -60,10 +56,6 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: top 
-	GENERIC MAP (
-			 g_MAX => x"0014", -- 200 ns for test purposes 
-			 g_MAX2 => x"000A" -- 100 ns for test purposes 
-	)
 	PORT MAP (
           clk_i  => clk_i,
           btn0_i => btn0_i,
@@ -100,45 +92,45 @@ BEGIN
 		wait for 5 ns;
 
       -- insert stimulus here 
---		-- test for initial 0000 pin code
+		-- test for initial 0000 pin code
 --		btn0_i <= '1';
---		wait for clk_i_period;
---		btn0_i <= '0';
---		wait for clk_i_period*2;
---		btn0_i <= '1';
---		wait for clk_i_period;
---		btn0_i <= '0';
---		wait for clk_i_period*2;
---		btn0_i <= '1';
---		wait for clk_i_period;
---		btn0_i <= '0';
---		wait for clk_i_period*2;
---		btn0_i <= '1';
---		wait for clk_i_period;
---		btn0_i <= '0';
 --		wait for clk_i_period*3;
---		-- test for failure 
---		btn0_i <= '1';
---		wait for clk_i_period;
 --		btn0_i <= '0';
---		wait for clk_i_period*2;
+--		wait for clk_i_period*5;
+--		btn0_i <= '1';
+--		wait for clk_i_period*3;
+--		btn0_i <= '0';
+--		wait for clk_i_period*5;
+--		btn0_i <= '1';
+--		wait for clk_i_period*3;
+--		btn0_i <= '0';
+--		wait for clk_i_period*5;
+--		btn0_i <= '1';
+--		wait for clk_i_period*3;
+--		btn0_i <= '0';
+--		wait for clk_i_period*11;
+		-- test for failure 
+--		btn0_i <= '1';
+--		wait for clk_i_period*3;
+--		btn0_i <= '0';
+--		wait for clk_i_period*5;
 --		btn1_i <= '1';
---		wait for clk_i_period;
---		btn1_i <= '0';
---		wait for clk_i_period*2;
---		btn2_i <= '1';
---		wait for clk_i_period;
---		btn2_i <= '0';
---		wait for clk_i_period*2;
---		btn3_i <= '1';
---		wait for clk_i_period;
---		btn3_i <= '0';
 --		wait for clk_i_period*3;
---		-- test for set new PIN 1234
+--		btn1_i <= '0';
+--		wait for clk_i_period*5;
+--		btn2_i <= '1';
+--		wait for clk_i_period*3;
+--		btn2_i <= '0';
+--		wait for clk_i_period*5;
+--		btn3_i <= '1';
+--		wait for clk_i_period*3;
+--		btn3_i <= '0';
+--		wait for clk_i_period*11;
+		-- test for set new PIN 1234
 --		btn11_i <= '1';
 --		wait for clk_i_period;
 --		btn11_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn0_i <= '1';
 --		wait for clk_i_period;
 --		btn0_i <= '0';
@@ -154,30 +146,31 @@ BEGIN
 --		btn3_i <= '1';
 --		wait for clk_i_period;
 --		btn3_i <= '0';
---		wait for clk_i_period*3;
+--		wait for clk_i_period*10;
 --		-- test new valid PIN : 1234
 --		btn0_i <= '1';
+--		wait for clk_i_period*10;
+--		btn0_i <= '0';
+--		wait for clk_i_period*15;
+--		btn1_i <= '1';
+--		wait for clk_i_period*10;
+--		btn1_i <= '0';
+--		wait for clk_i_period*15;
+--		btn2_i <= '1';
+--		wait for clk_i_period*10;
+--		btn2_i <= '0';
+--		wait for clk_i_period*15;
+--		btn3_i <= '1';
+--		wait for clk_i_period*10;
+--		btn3_i <= '0';
+--		wait for clk_i_period*20;
+--		-- test for led_counter to expire nad turn of led
+--		wait for clk_i_period*11;
+--		-- test timer to expire
+--		btn0_i <= '1';
 --		wait for clk_i_period;
 --		btn0_i <= '0';
---		wait for clk_i_period*2;
---		btn1_i <= '1';
---		wait for clk_i_period;
---		btn1_i <= '0';
---		wait for clk_i_period*2;
---		btn2_i <= '1';
---		wait for clk_i_period;
---		btn2_i <= '0';
---		wait for clk_i_period*2;
---		btn3_i <= '1';
---		wait for clk_i_period;
---		btn3_i <= '0';
---		-- test for led_counter to expire nad turn of led
---		wait for clk_i_period*10;
-		-- test timer to expire
-		btn0_i <= '1';
-		wait for clk_i_period;
-		btn0_i <= '0';
-		wait for clk_i_period*10;
+--		wait for clk_i_period*15;
       wait;
    end process;
 

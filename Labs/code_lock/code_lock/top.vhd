@@ -3,10 +3,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity top is
-generic (
-	g_MAX    : unsigned(16-1 downto 0) := x"C350"; -- equals 5sec
-	g_MAX2   : unsigned(16-1 downto 0) := x"4E20" -- equals 2sec
-);
 port (
 	clk_i : in std_logic;
 	
@@ -116,8 +112,8 @@ begin
 
 	CNT : entity work.counter
 	generic map (
-		g_MAX    => x"C350", -- equals 5sec
-		g_MAX2   => x"4E20" -- equals 2sec
+		g_MAX    => x"0064", -- equals 5sec
+		g_MAX2   => x"0032" -- equals 2sec
 	)
 	port map (
 		clk_i 		 => clk_i,

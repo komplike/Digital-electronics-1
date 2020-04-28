@@ -26,13 +26,14 @@ begin
 		if rising_edge(clk_i) then
 			if (cnt_i = '1') then --CNT signals times up
 				cnt_en_o <= '0'; --CNT to stop
-				cnt_led_en_o <= '1'; -- LED_CNT to start
 				led_o <= "10"; --LED(RED) '1'
+				cnt_led_en_o <= '1'; -- LED_CNT to start
 				state <= idle;
 			else
 				case state is
 					when idle =>
 						if (btn_valid_i = '1') then
+							led_o <= "00";
 							cnt_led_en_o <= '0';
 							if (btn_pressed_i = pin0) then
 								cnt_en_o <= '1'; --CNT to start
