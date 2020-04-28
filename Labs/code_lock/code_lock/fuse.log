@@ -1,0 +1,27 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/code_lock_tb_00_isim_beh.exe -prj /home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/code_lock_tb_00_beh.prj work.code_lock_tb_00 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/locker.vhd" into library work
+Parsing VHDL file "/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/counter.vhd" into library work
+Parsing VHDL file "/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/top.vhd" into library work
+Parsing VHDL file "/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/code_lock_tb_00.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 97424 KB
+Fuse CPU Usage: 2290 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity counter [\counter(('1','1','0','0','0','0...]
+Compiling architecture behavioral of entity locker [locker_default]
+Compiling architecture behavioral of entity top [\top(('0','0','0','0','0','0','0...]
+Compiling architecture behavior of entity code_lock_tb_00
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 10 VHDL Units
+Built simulation executable /home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/code_lock_tb_00_isim_beh.exe
+Fuse Memory Usage: 407184 KB
+Fuse CPU Usage: 2640 ms
+GCC CPU Usage: 950 ms

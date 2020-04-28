@@ -1,0 +1,4 @@
+vhdl work "locker.vhd"
+vhdl work "counter.vhd"
+vhdl work "top.vhd"
+vhdl work "code_lock_tb_00.vhd"
