@@ -106,10 +106,10 @@ begin
 					led0_o <= '1';
 				elsif (led_s = "10") then
 					led1_o <= '1';
-				else
-					led0_o <= '0';
-					led1_o <= '0';
 				end if;
+			else
+				led0_o <= '0';
+				led1_o <= '0';
 			end if;
 		end if;
 	end process led_decoder;

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/locker.vhd";
+static const char *ng0 = "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_2763492388968962707_503743352(char *, char *, unsigned int , unsigned int );
@@ -88,7 +88,7 @@ LAB5:    xsi_set_current_line(28, ng0);
     *((unsigned char *)t8) = (unsigned char)3;
     xsi_driver_first_trans_fast_port(t1);
     xsi_set_current_line(30, ng0);
-    t1 = (t0 + 7796);
+    t1 = (t0 + 7724);
     t4 = (t0 + 4472);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
@@ -198,7 +198,7 @@ LAB81:
 LAB80:    goto LAB8;
 
 LAB17:    xsi_set_current_line(96, ng0);
-    t1 = (t0 + 7804);
+    t1 = (t0 + 7732);
     t4 = (t0 + 4472);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
@@ -266,7 +266,7 @@ LAB99:
 LAB98:    goto LAB8;
 
 LAB21:    xsi_set_current_line(113, ng0);
-    t1 = (t0 + 7806);
+    t1 = (t0 + 7734);
     t4 = (t0 + 4472);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
@@ -301,7 +301,7 @@ LAB21:    xsi_set_current_line(113, ng0);
     goto LAB8;
 
 LAB22:    xsi_set_current_line(118, ng0);
-    t1 = (t0 + 7808);
+    t1 = (t0 + 7736);
     t4 = (t0 + 4472);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
@@ -359,7 +359,7 @@ LAB31:    if (t2 != 0)
 
 LAB28:    t1 = (t0 + 1512U);
     t3 = *((char **)t1);
-    t1 = (t0 + 7798);
+    t1 = (t0 + 7726);
     t2 = 1;
     if (4U == 4U)
         goto LAB37;
@@ -525,7 +525,7 @@ LAB52:    xsi_set_current_line(65, ng0);
     memcpy(t10, t4, 4U);
     xsi_driver_first_trans_fast(t1);
     xsi_set_current_line(66, ng0);
-    t1 = (t0 + 7802);
+    t1 = (t0 + 7730);
     t4 = (t0 + 4472);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);

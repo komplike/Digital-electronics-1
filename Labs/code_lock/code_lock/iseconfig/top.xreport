@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-04-27T23:43:31</DateModified>
+  <DateModified>2020-04-28T16:52:08</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/</ImplementationReportsDirectory>
   <DateInitialized>2020-04-26T21:32:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

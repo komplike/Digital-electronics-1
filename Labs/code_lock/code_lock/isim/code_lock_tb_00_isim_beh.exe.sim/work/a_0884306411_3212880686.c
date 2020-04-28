@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/komplike/Digital-electronics-1/Labs/proj_code_lock/code_lock/counter.vhd";
+static const char *ng0 = "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -74,9 +74,9 @@ LAB2:    xsi_set_current_line(28, ng0);
 
 LAB7:    t1 = (t0 + 1832U);
     t3 = *((char **)t1);
-    t1 = (t0 + 6688U);
-    t4 = (t0 + 6781);
-    t8 = (t0 + 6656U);
+    t1 = (t0 + 6624U);
+    t4 = (t0 + 6717);
+    t8 = (t0 + 6592U);
     t9 = ieee_p_1242562249_sub_1006216973935724872_1035706684(IEEE_P_1242562249, t13, t4, t8, 1);
     t2 = ieee_p_1242562249_sub_1434220770698190313_1035706684(IEEE_P_1242562249, t3, t1, t9, t13);
     if (t2 != 0)
@@ -85,7 +85,7 @@ LAB7:    t1 = (t0 + 1832U);
 LAB9:    xsi_set_current_line(35, ng0);
     t1 = (t0 + 1832U);
     t3 = *((char **)t1);
-    t1 = (t0 + 6688U);
+    t1 = (t0 + 6624U);
     t4 = ieee_p_1242562249_sub_1006216973935652998_1035706684(IEEE_P_1242562249, t13, t3, t1, 1);
     t7 = (t13 + 12U);
     t18 = *((unsigned int *)t7);
@@ -204,9 +204,9 @@ LAB2:    xsi_set_current_line(45, ng0);
 
 LAB7:    t1 = (t0 + 1992U);
     t3 = *((char **)t1);
-    t1 = (t0 + 6688U);
-    t4 = (t0 + 6797);
-    t8 = (t0 + 6672U);
+    t1 = (t0 + 6624U);
+    t4 = (t0 + 6733);
+    t8 = (t0 + 6608U);
     t9 = ieee_p_1242562249_sub_1006216973935724872_1035706684(IEEE_P_1242562249, t13, t4, t8, 1);
     t2 = ieee_p_1242562249_sub_1434220770698190313_1035706684(IEEE_P_1242562249, t3, t1, t9, t13);
     if (t2 != 0)
@@ -215,7 +215,7 @@ LAB7:    t1 = (t0 + 1992U);
 LAB9:    xsi_set_current_line(52, ng0);
     t1 = (t0 + 1992U);
     t3 = *((char **)t1);
-    t1 = (t0 + 6688U);
+    t1 = (t0 + 6624U);
     t4 = ieee_p_1242562249_sub_1006216973935652998_1035706684(IEEE_P_1242562249, t13, t3, t1, 1);
     t7 = (t13 + 12U);
     t18 = *((unsigned int *)t7);
@@ -237,7 +237,7 @@ LAB11:    t8 = (t0 + 4176);
     t4 = *((char **)t3);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
-    *((unsigned char *)t8) = (unsigned char)2;
+    *((unsigned char *)t8) = (unsigned char)3;
     xsi_driver_first_trans_fast_port(t1);
 
 LAB6:    goto LAB3;
@@ -282,7 +282,7 @@ LAB8:    xsi_set_current_line(49, ng0);
     t4 = *((char **)t3);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
-    *((unsigned char *)t8) = (unsigned char)3;
+    *((unsigned char *)t8) = (unsigned char)2;
     xsi_driver_first_trans_fast_port(t1);
     goto LAB6;
 

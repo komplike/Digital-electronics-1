@@ -4,8 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity counter is
 generic (
-    g_MAX    : unsigned(16-1 downto 0) := x"C350"; -- equals 5sec
-	 g_MAX2   : unsigned(16-1 downto 0) := x"4E20" -- equals 2sec
+    g_MAX    : unsigned(16-1 downto 0) := x"0014"; 
+	 g_MAX2   : unsigned(16-1 downto 0) := x"000A"
 );
 port (
     clk_i 	 		: in  std_logic;

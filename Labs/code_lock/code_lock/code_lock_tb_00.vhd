@@ -61,8 +61,8 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: top 
 	GENERIC MAP (
-			 g_MAX => x"0005", -- 5 ms for test purposes 
-			 g_MAX2 => x"0002" -- 2 ms for test purposes 
+			 g_MAX => x"0014", -- 200 ns for test purposes 
+			 g_MAX2 => x"000A" -- 100 ns for test purposes 
 	)
 	PORT MAP (
           clk_i  => clk_i,
@@ -100,69 +100,84 @@ BEGIN
 		wait for 5 ns;
 
       -- insert stimulus here 
-		-- test for initial 0000 pin code
-		btn0_i <= '1';
-		wait for clk_i_period*2;
-		btn0_i <= '0';
-		wait for clk_i_period*3;
-		btn0_i <= '1';
-		wait for clk_i_period*2;
-		btn0_i <= '0';
-		wait for clk_i_period*3;
-		btn0_i <= '1';
-		wait for clk_i_period*2;
-		btn0_i <= '0';
-		wait for clk_i_period*3;
-		btn0_i <= '1';
-		wait for clk_i_period*2;
-		btn0_i <= '0';
-		wait for clk_i_period*3;
---		-- test for failure
+--		-- test for initial 0000 pin code
 --		btn0_i <= '1';
---		btn0_i <= '0';
 --		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*2;
+--		btn0_i <= '1';
+--		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*2;
+--		btn0_i <= '1';
+--		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*2;
+--		btn0_i <= '1';
+--		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*3;
+--		-- test for failure 
+--		btn0_i <= '1';
+--		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*2;
 --		btn1_i <= '1';
+--		wait for clk_i_period;
 --		btn1_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn2_i <= '1';
+--		wait for clk_i_period;
 --		btn2_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn3_i <= '1';
---		btn3_i <= '0';
 --		wait for clk_i_period;
---		-- test for set new PIN
---		btn10_i <= '1';
---		btn10_i <= '0';
+--		btn3_i <= '0';
+--		wait for clk_i_period*3;
+--		-- test for set new PIN 1234
+--		btn11_i <= '1';
+--		wait for clk_i_period;
+--		btn11_i <= '0';
 --		wait for clk_i_period;
 --		btn0_i <= '1';
---		btn0_i <= '0';
 --		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*2;
 --		btn1_i <= '1';
+--		wait for clk_i_period;
 --		btn1_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn2_i <= '1';
+--		wait for clk_i_period;
 --		btn2_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn3_i <= '1';
+--		wait for clk_i_period;
 --		btn3_i <= '0';
---		wait for clk_i_period;
---		-- test for new PIN
+--		wait for clk_i_period*3;
+--		-- test new valid PIN : 1234
 --		btn0_i <= '1';
---		btn0_i <= '0';
 --		wait for clk_i_period;
+--		btn0_i <= '0';
+--		wait for clk_i_period*2;
 --		btn1_i <= '1';
+--		wait for clk_i_period;
 --		btn1_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn2_i <= '1';
+--		wait for clk_i_period;
 --		btn2_i <= '0';
---		wait for clk_i_period;
+--		wait for clk_i_period*2;
 --		btn3_i <= '1';
---		btn3_i <= '0';
 --		wait for clk_i_period;
---		-- test for time out (5 expired)
---		btn0_i <= '1';
---		btn0_i <= '0';
---		wait for clk_i_period*5;
+--		btn3_i <= '0';
+--		-- test for led_counter to expire nad turn of led
+--		wait for clk_i_period*10;
+		-- test timer to expire
+		btn0_i <= '1';
+		wait for clk_i_period;
+		btn0_i <= '0';
+		wait for clk_i_period*10;
       wait;
    end process;
 
