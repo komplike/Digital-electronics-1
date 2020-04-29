@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.xst" -ofn "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.syr" 
