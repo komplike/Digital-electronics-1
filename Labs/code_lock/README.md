@@ -25,13 +25,13 @@ Projekt je rozdelený do troch modulov (entít)
 - locker
 - top
 
-Modul **counter** - čítač obsahuje dva procesy
-- *counter* -- čítač používaný ako časový limit pre zadanie PIN kódu
-- *counter_led* -- čítač určujúci trvanie LED signalizácie
+Modul [counter](code_lock/counter.vhd "Otvoriť code_lock/counter.vhd") - čítač obsahuje dva procesy
+- *counter* - čítač používaný ako časový limit pre zadanie PIN kódu
+- *counter_led* - čítač určujúci trvanie LED signalizácie
 
-Modul **locker** - zámok  sprostredkuje proces stavového automatu.
+Modul [locker](code_lock/locker.vhd "Otvoriť code_lock/locker.vhd") - zámok  sprostredkuje proces stavového automatu.
   
-  Modul **top** zabezpečuje spracvanie vstupných a výstupných signálov ako aj rozhranie entitám *counter* a *locker*. Obsahuje
+Modul [top](code_lock/top.vhd "Otvoriť code_lock/top.vhd") zabezpečuje spracvanie vstupných a výstupných signálov ako aj rozhranie entitám *counter* a *locker*. Obsahuje
 
 -  *btn_decoder* - dekóder vstupu
 
@@ -41,15 +41,17 @@ Modul **locker** - zámok  sprostredkuje proces stavového automatu.
 	&nbsp; &nbsp; &nbsp; dekóduje vektor s informáciou o aktivácii LED diódy na výstupné signály
 
 #### RTL schéma
-![RTL schéma](images/RTL_scheme.png)
+> Zjednodušená schéma top modulu
+![RTL schéma](images/RTL_top_simplified.png)
+Úplná schéma [TU](RTL_full.pdf)
 
 ### Simulácie
 #### Modul **counter**
-> nulovanie čítača po deaktivácii signálu *_en_i , impulz na výstupe, po dosiahnutí MAX hodnoty čítača
+> [testbench](/code_lock/counter_tb_00.vhd) nulovanie čítača po deaktivácii signálu *_en_i , impulz na výstupe, po dosiahnutí MAX hodnoty čítača
 ![simulácia modulu counter](images/sim_counter.png)
 
 #### Modul **locker** 
-> signalizácia spustenia čítača po stlačení tlačidla, LED(zelená/červená) signalizácia úspešnosti na výstup
+> [testbench](/code_lock/locker_tb_00.vhd) signalizácia spustenia čítača po stlačení tlačidla, LED(zelená/červená) signalizácia úspešnosti na výstup
 ![simulácia modulu locker](images/sim_locker_10.png)
 
 > nastavenie nového PINu a testovanie jeho správnosti
@@ -59,8 +61,9 @@ Modul **locker** - zámok  sprostredkuje proces stavového automatu.
 ![simulácia modulu locker](images/sim_locker_cnt1.png)
 
 #### Modul **top** 
-> zadanie predvoleného PINu 0000 a následná LED(zelená) signalizácia na výstupe
+> [testbench](/code_lock/top_tb_00.vhd) zadanie predvoleného PINu 0000 a následná LED(zelená) signalizácia na výstupe
 ![simulácia modulu top](images/sim_top_default.png)
+
 
 > zadanie nesprávneho PINu 1234 a následná LED(červená) signalizácia na výstupe
 ![simulácia modulu top](images/sim_top_fail.png)
@@ -71,3 +74,7 @@ Modul **locker** - zámok  sprostredkuje proces stavového automatu.
 > zadanie nového PINu 1234 a následná LED(zelená) signalizácia na výstupe
 ![simulácia modulu top](images/sim_top_newcode.png)
 
+### Záver
+
+
+#### Referencie
