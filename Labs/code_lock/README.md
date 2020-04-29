@@ -48,9 +48,8 @@ Modul [top](code_lock/top.vhd "Otvoriť code_lock/top.vhd") zabezpečuje spracva
 ### Simulácie
 #### Modul **counter**
 > [testbench](/code_lock/counter_tb_00.vhd) nulovanie čítača po deaktivácii signálu *_en_i , impulz na výstupe, po dosiahnutí MAX hodnoty čítača
-<details><summary>Klikni</summary>
 ![simulácia modulu counter](images/sim_counter.png)
-</details>
+
 
 
 #### Modul **locker** 
