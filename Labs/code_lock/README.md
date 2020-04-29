@@ -77,6 +77,10 @@ Modul [top](code_lock/top.vhd "Otvoriť code_lock/top.vhd") zabezpečuje spracva
 ![simulácia modulu top](images/sim_top_newcode.png)
 
 ### Záver
-
+Projekt *Kódový zámok* bol zrealizovaný ako ukážka nadobudnutých poznatkov z jazyka VHDL obsiahnutého v predmete *Digitálna elektronika 1*. Jednoduché zadanie projektu dovolilo úlohu rozvinúť podľa uváženia študentov a tak vytvoriť vlastné unikátne riešenie.
 
 #### Referencie
+[Santa, Kremiec, github repozitár](https://github.com/komplike/Digital-electronics-1/)
+[Frýza T., github repozitár](https://github.com/tomas-fryza/Digital-electronics-1)
+[Kubíček M., Vybrané partie jazyka VHDL](https://moodle.vutbr.cz/pluginfile.php/183804/mod_resource/content/1/vhdl_kubicek.pdf)
+[Dr. Jayram, VHDL Reference Manual](https://www.ics.uci.edu/~jmoorkan/vhdlref/Synario%20VHDL%20Manual.pdf)
