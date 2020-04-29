@@ -1,0 +1,6 @@
+AR counter behavioral /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd sub00/vhpl01 1588158020
+EN locker NULL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd sub00/vhpl02 1588158021
+EN top NULL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd sub00/vhpl04 1588158023
+EN counter NULL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd sub00/vhpl00 1588158019
+AR locker behavioral /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd sub00/vhpl03 1588158022
+AR top behavioral /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd sub00/vhpl05 1588158024

@@ -1,0 +1,22 @@
+V3 11
+FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd 2020/04/28.18:38:56 P.20131013
+EN work/counter 1588158019 \
+      FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/counter/Behavioral 1588158020 \
+      FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd \
+      EN work/counter 1588158019
+FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd 2020/04/28.18:52:02 P.20131013
+EN work/locker 1588158021 \
+      FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/locker/Behavioral 1588158022 \
+      FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd \
+      EN work/locker 1588158021
+FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd 2020/04/28.19:30:58 P.20131013
+EN work/top 1588158023 \
+      FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/top/Behavioral 1588158024 \
+      FL /home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd \
+      EN work/top 1588158023 CP work/counter CP work/locker

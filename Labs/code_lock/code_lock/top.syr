@@ -1,0 +1,409 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd" in Library work.
+Entity <counter> compiled.
+Entity <counter> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd" in Library work.
+Entity <locker> compiled.
+Entity <locker> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <Behavioral>) with generics.
+	g_MAX = "0000000001100100"
+	g_MAX2 = "0000000000110010"
+
+Analyzing hierarchy for entity <locker> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <Behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing generic Entity <counter> in library <work> (Architecture <Behavioral>).
+	g_MAX = "0000000001100100"
+	g_MAX2 = "0000000000110010"
+Entity <counter> analyzed. Unit <counter> generated.
+
+Analyzing Entity <locker> in library <work> (Architecture <Behavioral>).
+Entity <locker> analyzed. Unit <locker> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/counter.vhd".
+    Found 1-bit register for signal <cnt_o>.
+    Found 1-bit register for signal <cnt_led_o>.
+    Found 16-bit comparator greatequal for signal <cnt_led_o$cmp_ge0000> created at line 47.
+    Found 16-bit comparator less for signal <cnt_o$cmp_lt0000> created at line 30.
+    Found 16-bit up counter for signal <s_cnt>.
+    Found 16-bit comparator greatequal for signal <s_cnt$cmp_ge0000> created at line 30.
+    Found 16-bit up counter for signal <s_cnt_led>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   3 Comparator(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <locker>.
+    Related source file is "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/locker.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 29                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 16                                             |
+    | Clock              | clk_i                     (rising_edge)        |
+    | Reset              | cnt_i                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <cnt_en_o>.
+    Found 2-bit register for signal <led_o>.
+    Found 1-bit register for signal <cnt_led_en_o>.
+    Found 4-bit register for signal <pin0>.
+    Found 4-bit register for signal <pin1>.
+    Found 4-bit register for signal <pin2>.
+    Found 4-bit register for signal <pin3>.
+    Found 4-bit comparator equal for signal <state$cmp_eq0000> created at line 38.
+    Found 4-bit comparator equal for signal <state$cmp_eq0002> created at line 74.
+    Found 4-bit comparator equal for signal <state$cmp_eq0003> created at line 82.
+    Found 4-bit comparator equal for signal <state$cmp_eq0004> created at line 90.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 Comparator(s).
+Unit <locker> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "/home/komplike/Digital-electronics-1/Labs/code_lock/code_lock/top.vhd".
+    Found 1-bit register for signal <led0_o>.
+    Found 1-bit register for signal <led1_o>.
+    Found 1-bit register for signal <btn0_dly>.
+    Found 1-bit register for signal <btn10_dly>.
+    Found 1-bit register for signal <btn11_dly>.
+    Found 1-bit register for signal <btn1_dly>.
+    Found 1-bit register for signal <btn2_dly>.
+    Found 1-bit register for signal <btn3_dly>.
+    Found 1-bit register for signal <btn4_dly>.
+    Found 1-bit register for signal <btn5_dly>.
+    Found 1-bit register for signal <btn6_dly>.
+    Found 1-bit register for signal <btn7_dly>.
+    Found 1-bit register for signal <btn8_dly>.
+    Found 1-bit register for signal <btn9_dly>.
+    Found 4-bit register for signal <btn_pressed_s>.
+    Found 1-bit register for signal <btn_valid_s>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 16-bit up counter                                     : 2
+# Registers                                            : 25
+ 1-bit register                                        : 19
+ 2-bit register                                        : 1
+ 4-bit register                                        : 5
+# Comparators                                          : 7
+ 16-bit comparator greatequal                          : 2
+ 16-bit comparator less                                : 1
+ 4-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <LCK/state/FSM> on signal <state[1:13]> with one-hot encoding.
+---------------------------
+ State    | Encoding
+---------------------------
+ idle     | 0000000000001
+ set0     | 0000000000100
+ set1     | 0000000010000
+ set2     | 0000000100000
+ set3     | 0000001000000
+ pressed1 | 0000000000010
+ pressed2 | 0000010000000
+ pressed3 | 0001000000000
+ pressed4 | 0100000000000
+ err1     | 0000000001000
+ err2     | 0000100000000
+ err3     | 0010000000000
+ err4     | 1000000000000
+---------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 2
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+  implementation constraint: INIT=r	 : btn3_dly
+  implementation constraint: INIT=r	 : btn8_dly
+  implementation constraint: INIT=r	 : btn4_dly
+  implementation constraint: INIT=r	 : btn0_dly
+  implementation constraint: INIT=r	 : btn9_dly
+  implementation constraint: INIT=r	 : btn5_dly
+  implementation constraint: INIT=r	 : btn1_dly
+  implementation constraint: INIT=r	 : btn10_dly
+  implementation constraint: INIT=r	 : btn_pressed_s_0
+  implementation constraint: INIT=r	 : btn6_dly
+  implementation constraint: INIT=r	 : btn2_dly
+  implementation constraint: INIT=r	 : btn11_dly
+  implementation constraint: INIT=r	 : btn_pressed_s_1
+  implementation constraint: INIT=r	 : btn7_dly
+  implementation constraint: INIT=r	 : led1_o
+  implementation constraint: INIT=r	 : btn_valid_s
+  implementation constraint: INIT=r	 : led0_o
+  implementation constraint: INIT=r	 : btn_pressed_s_3
+  implementation constraint: INIT=r	 : btn_pressed_s_2
+
+Optimizing unit <locker> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd9
+  implementation constraint: INIT=r	 : led_o_0
+  implementation constraint: INIT=r	 : pin0_3
+  implementation constraint: INIT=r	 : pin1_3
+  implementation constraint: INIT=r	 : pin2_3
+  implementation constraint: INIT=r	 : pin3_3
+  implementation constraint: INIT=r	 : cnt_en_o
+  implementation constraint: INIT=r	 : cnt_led_en_o
+  implementation constraint: INIT=s	 : state_FSM_FFd13
+  implementation constraint: INIT=r	 : state_FSM_FFd12
+  implementation constraint: INIT=r	 : state_FSM_FFd11
+  implementation constraint: INIT=r	 : state_FSM_FFd10
+  implementation constraint: INIT=r	 : pin3_0
+  implementation constraint: INIT=r	 : pin3_1
+  implementation constraint: INIT=r	 : pin3_2
+  implementation constraint: INIT=r	 : pin2_0
+  implementation constraint: INIT=r	 : pin2_1
+  implementation constraint: INIT=r	 : pin2_2
+  implementation constraint: INIT=r	 : pin1_0
+  implementation constraint: INIT=r	 : pin1_1
+  implementation constraint: INIT=r	 : pin1_2
+  implementation constraint: INIT=r	 : pin0_0
+  implementation constraint: INIT=r	 : pin0_1
+  implementation constraint: INIT=r	 : pin0_2
+  implementation constraint: INIT=r	 : led_o_1
+  implementation constraint: INIT=r	 : state_FSM_FFd6
+  implementation constraint: INIT=r	 : state_FSM_FFd7
+  implementation constraint: INIT=r	 : state_FSM_FFd8
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
+  implementation constraint: INIT=r	 : state_FSM_FFd5
+
+Optimizing unit <counter> ...
+  implementation constraint: INIT=r	 : cnt_o
+  implementation constraint: INIT=r	 : cnt_led_o
+  implementation constraint: INIT=r	 : s_cnt_led_15
+  implementation constraint: INIT=r	 : s_cnt_led_0
+  implementation constraint: INIT=r	 : s_cnt_led_1
+  implementation constraint: INIT=r	 : s_cnt_led_2
+  implementation constraint: INIT=r	 : s_cnt_led_3
+  implementation constraint: INIT=r	 : s_cnt_led_4
+  implementation constraint: INIT=r	 : s_cnt_led_5
+  implementation constraint: INIT=r	 : s_cnt_led_6
+  implementation constraint: INIT=r	 : s_cnt_led_7
+  implementation constraint: INIT=r	 : s_cnt_led_8
+  implementation constraint: INIT=r	 : s_cnt_led_9
+  implementation constraint: INIT=r	 : s_cnt_led_10
+  implementation constraint: INIT=r	 : s_cnt_led_11
+  implementation constraint: INIT=r	 : s_cnt_led_12
+  implementation constraint: INIT=r	 : s_cnt_led_13
+  implementation constraint: INIT=r	 : s_cnt_led_14
+  implementation constraint: INIT=r	 : s_cnt_15
+  implementation constraint: INIT=r	 : s_cnt_0
+  implementation constraint: INIT=r	 : s_cnt_1
+  implementation constraint: INIT=r	 : s_cnt_2
+  implementation constraint: INIT=r	 : s_cnt_3
+  implementation constraint: INIT=r	 : s_cnt_4
+  implementation constraint: INIT=r	 : s_cnt_5
+  implementation constraint: INIT=r	 : s_cnt_6
+  implementation constraint: INIT=r	 : s_cnt_7
+  implementation constraint: INIT=r	 : s_cnt_8
+  implementation constraint: INIT=r	 : s_cnt_9
+  implementation constraint: INIT=r	 : s_cnt_10
+  implementation constraint: INIT=r	 : s_cnt_11
+  implementation constraint: INIT=r	 : s_cnt_12
+  implementation constraint: INIT=r	 : s_cnt_13
+  implementation constraint: INIT=r	 : s_cnt_14
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 487
+#      AND2                        : 158
+#      AND3                        : 17
+#      AND4                        : 12
+#      AND7                        : 1
+#      AND8                        : 2
+#      GND                         : 2
+#      INV                         : 185
+#      OR2                         : 51
+#      OR3                         : 6
+#      OR4                         : 2
+#      OR8                         : 5
+#      XOR2                        : 46
+# FlipFlops/Latches                : 86
+#      FD                          : 64
+#      FDCE                        : 22
+# IO Buffers                       : 15
+#      IBUF                        : 13
+#      OBUF                        : 2
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.57 secs
+ 
+--> 
+
+
+Total memory usage is 537896 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

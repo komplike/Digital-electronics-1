@@ -1,0 +1,3 @@
+vhdl work "locker.vhd"
+vhdl work "counter.vhd"
+vhdl work "top.vhd"
